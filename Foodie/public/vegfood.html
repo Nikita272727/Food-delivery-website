@@ -1,0 +1,207 @@
+
+<!-- this is  new -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Veg</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .continer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .box {
+            background-color: #c9c3c3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1 1 calc(25% - 1.5rem); /* 4 items per row */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box button:hover {
+            background-color: rgb(131, 199, 138);
+        }
+
+        .box img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .box h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .box h3 {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .box button {
+            height: 35px;
+            width: 100px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .box button:hover {
+            background-color: #2ecc71;
+            transform: translateY(-2px);
+        }
+
+        .box button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .box {
+                flex: 1 1 calc(33.33% - 1.5rem); /* 3 items per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 1.5rem); /* 2 items per row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                flex: 1 1 100%; /* 1 item per row */
+            }
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <div class="box">
+            <a href="order.html?item=Dosa&price=400&image=photo/veg Food/dosa.jpg">
+                <img src="photo/veg Food/dosa.jpg" alt="Dosa">
+            </a>
+            <h2>Dosa</h2>
+            <h3>₹400</h3>
+            <button><a href="order.html?item=Dosa&price=400&image=photo/veg Food/dosa.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Idli&price=450&image=photo/veg Food/idli.jpg">
+                <img src="photo/veg Food/idli.jpg" alt="Idli">
+            </a>
+            <h2>Idli</h2>
+            <h3>₹450</h3>
+            <button><a href="order.html?item=Idli&price=450&image=photo/veg Food/idli.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Vada&price=400&image=photo/veg Food/vada.jpg">
+                <img src="photo/veg Food/vada.jpg" alt="Vada">
+            </a>
+            <h2>Vada</h2>
+            <h3>₹400</h3>
+            <button><a href="order.html?item=Vada&price=400&image=photo/veg Food/vada.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Butter Naan&price=200&image=photo/veg Food/butter naan.jpg">
+                <img src="photo/veg Food/butter naan.jpg" alt="Butter Naan">
+            </a>
+            <h2>Butter Naan</h2>
+            <h3>₹200</h3>
+            <button><a href="order.html?item=Butter Naan&price=200&image=photo/veg Food/butter naan.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Curd Rice&price=800&image=photo/veg Food/c Rice.jpg">
+                <img src="photo/veg Food/c Rice.jpg" alt="Curd Rice">
+            </a>
+            <h2>Curd Rice</h2>
+            <h3>₹800</h3>
+            <button><a href="order.html?item=Curd Rice&price=800&image=photo/veg Food/c Rice.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Jeera Rice&price=900&image=photo/veg Food/Jeera Rice.jpg">
+                <img src="photo/veg Food/Jeera Rice.jpg" alt="Jeera Rice">
+            </a>
+            <h2>Jeera Rice</h2>
+            <h3>₹900</h3>
+            <button><a href="order.html?item=Jeera Rice&price=900&image=photo/veg Food/Jeera Rice.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Palak Paneer&price=1200&image=photo/veg Food/palak-paneer.jpg">
+                <img src="photo/veg Food/palak-paneer.jpg" alt="Palak Paneer">
+            </a>
+            <h2>Palak Paneer</h2>
+            <h3>₹1200</h3>
+            <button><a href="order.html?item=Palak Paneer&price=1200&image=photo/veg Food/palak-paneer.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Paneer Butter Masala&price=1400&image=photo/veg Food/PBM.png">
+                <img src="photo/veg Food/PBM.png" alt="Paneer Butter Masala">
+            </a>
+            <h2>Paneer Butter Masala</h2>
+            <h3>₹1400</h3>
+            <button><a href="order.html?item=Paneer Butter Masala&price=1400&image=photo/veg Food/PBM.png">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Chole Bhature&price=750&image=photo/veg Food/chole-bhature.avif">
+                <img src="photo/veg Food/chole-bhature.avif" alt="Chole Bhature">
+            </a>
+            <h2>Chole Bhature</h2>
+            <h3>₹750</h3>
+            <button><a href="order.html?item=Chole Bhature&price=750&image=photo/veg Food/chole-bhature.avif">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Kulcha&price=250&image=photo/veg Food/kucha.jpg">
+                <img src="photo/veg Food/kucha.jpg" alt="Kulcha">
+            </a>
+            <h2>Kulcha</h2>
+            <h3>₹250</h3>
+            <button><a href="order.html?item=Kulcha&price=250&image=photo/veg Food/kucha.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Mushroom Biryani&price=1100&image=photo/veg Food/Mushroom-Biryani.jpg">
+                <img src="photo/veg Food/Mushroom-Biryani.jpg" alt="Mushroom Biryani">
+            </a>
+            <h2>Mushroom Biryani</h2>
+            <h3>₹1100</h3>
+            <button><a href="order.html?item=Mushroom Biryani&price=1100&image=photo/veg Food/Mushroom-Biryani.jpg">Order</a></button>
+        </div>
+        <div class="box">
+            <a href="order.html?item=Veg Biryani&price=1300&image=photo/veg Food/veg biryani.jpg">
+                <img src="photo/veg Food/veg biryani.jpg" alt="Veg Biryani">
+            </a>
+            <h2>Veg Biryani</h2>
+            <h3>₹1300</h3>
+            <button><a href="order.html?item=Veg Biryani&price=1300&image=photo/veg Food/veg biryani.jpg">Order</a></button>
+        </div>
+    </div>
+</body>
+</html>

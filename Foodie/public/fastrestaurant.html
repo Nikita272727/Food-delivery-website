@@ -1,0 +1,142 @@
+
+<!-- this is new -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .box {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1 1 calc(25% - 1rem);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .box {
+                flex: 1 1 calc(33.33% - 1rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurants</h1>
+    <div class="container">
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/1.webp" alt="Truffles">
+                <h3>Truffles</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/2.jfif" alt="Food Adda">
+                <h3>Food Adda</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/3.jpg" alt="Taaza Thindi">
+                <h3>Taaza Thindi</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/4.webp" alt="Koshy's">
+                <h3>Koshy's</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/5.jpg" alt="Empire">
+                <h3>Empire</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/6.jpg" alt="Smoke House">
+                <h3>Smoke House</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/7.png" alt="Kentaky">
+                <h3>Kentaky</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/8.jpg" alt="Paris Panini">
+                <h3>Paris Panini</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="fastfood.html">
+                <img src="photo/Resturant/9.jfif" alt="Munching Corner">
+                <h3>Munching Corner</h3>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

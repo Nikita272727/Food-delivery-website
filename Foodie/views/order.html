@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Order Page</title>
+  <link rel="stylesheet" href="order.css">
+  <!-- <style>   
+  body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu, .cart, .delivery-info {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu {
+      flex: 2;
+    }
+
+    .cart, .delivery-info {
+      flex: 1;
+    }
+
+    .food-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    .food-item button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cart-summary {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .checkout-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    label {
+      margin-top: 10px;
+      display: block;
+      font-weight: bold;
+    }
+
+  </style>   -->
+
+</head>
+
+<body>
+
+  <header>
+    🍱 Foodie - Place Your Order
+    <!-- 🍕 Order Your Favorite Food -->
+  </header>
+
+  <div class="container">
+    <div id="selected-item" class="menu">
+      <h2>Order Details</h2>
+      <img id="order-image" src="" alt="" style="width:300px; border-radius:10px;">
+      <p><strong>Item:</strong> <span id="order-item"></span></p>
+      <p><strong>Price:</strong> <span id="order-price"></span></p>
+
+    </div>
+    <!-- Delivery Info -->
+    <div class="delivery-info">
+      <h2>Delivery Info</h2>
+      <form action="orders" method="POST">
+         <!-- Hidden Inputs for Item Details -->
+        <input type="hidden" id="order-item" name="item_name">
+        <input type="hidden" id="order-price" name="price">
+        <input type="hidden" id="order-image" name="image_url">
+
+        <label for="phone">📞 Phone Number</label>
+        <input type="tel" id="phone" name="phone" type="text"  pattern="^\d{10}$"
+          maxlength="10" requiredplaceholder="e.g. +1234567890" required>
+
+        <label for="address">🏠 Delivery Address</label>
+        <textarea id="address" name="address" rows="1" placeholder="City" required></textarea>
+
+        <!-- <label for="instructions">📦 Delivery Instructions (Optional)</label>
+      <textarea id="instructions" name="instructions" rows="2" placeholder="Leave at door, ring bell, etc."></textarea> -->
+
+
+        <button type="submit" class="checkout-btn">Confirm & Next</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        item: params.get('item'),
+        price: params.get('price'),
+        image: params.get('image')
+      };
+    }
+
+    window.onload = function () {
+      const { item, price, image } = getQueryParams();
+
+      if (item && price && image) {
+        document.getElementById('order-item').textContent = item;
+        document.getElementById('order-price').textContent = `₹${price}`;
+        document.getElementById('order-image').src = image;
+        document.getElementById('order-image').alt = item;
+      }
+    };
+
+
+  </script>
+
+</body>
+
+</html>

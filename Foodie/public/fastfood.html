@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Fast Food</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .box {
+            background-color: #c9c3c3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1 1 calc(25% - 1.5rem);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .box img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .box h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .box h3 {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .box button {
+            height: 35px;
+            width: 100px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .box button:hover {
+            background-color: #2ecc71;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1024px) {
+            .box {
+                flex: 1 1 calc(33.33% - 1.5rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 1.5rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+            <a href="order.html?item=Burger&price=600&image=photo/FastFood/burger.jpg">
+                <img src="photo/FastFood/burger.jpg" alt="Burger">
+                <h2>Burger</h2>
+                <h3>₹600</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Donut&price=899&image=photo/FastFood/donut.jpg">
+                <img src="photo/FastFood/donut.jpg" alt="Donut">
+                <h2>Donut</h2>
+                <h3>₹899</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=French Fries&price=550&image=photo/FastFood/french.jpg">
+                <img src="photo/FastFood/french.jpg" alt="French Fries">
+                <h2>French Fries</h2>
+                <h3>₹550</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Gobi-65&price=900&image=photo/FastFood/Gobi-65.jpg">
+                <img src="photo/FastFood/Gobi-65.jpg" alt="Gobi-65">
+                <h2>Gobi-65</h2>
+                <h3>₹900</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=HotDog&price=800&image=photo/FastFood/HotDog.jpg">
+                <img src="photo/FastFood/HotDog.jpg" alt="HotDog">
+                <h2>HotDog</h2>
+                <h3>₹800</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Gobi Manchurian&price=1100&image=photo/FastFood/Gobi.jpg">
+                <img src="photo/FastFood/Gobi.jpg" alt="Gobi Manchurian">
+                <h2>Gobi Manchurian</h2>
+                <h3>₹1100</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Sandwich&price=800&image=photo/FastFood/sandwish.jpg">
+                <img src="photo/FastFood/sandwish.jpg" alt="Sandwich">
+                <h2>Sandwich</h2>
+                <h3>₹800</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Noodles&price=900&image=photo/FastFood/noodles.jpg">
+                <img src="photo/FastFood/noodles.jpg" alt="Noodles">
+                <h2>Noodles</h2>
+                <h3>₹900</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Paneer Manchurian&price=1100&image=photo/FastFood/panner%20manchuri.jpg">
+                <img src="photo/FastFood/panner manchuri.jpg" alt="Paneer Manchurian">
+                <h2>Paneer Manchurian</h2>
+                <h3>₹1100</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Fried Rice&price=800&image=photo/FastFood/fried%20rice.jpg">
+                <img src="photo/FastFood/fried rice.jpg" alt="Fried Rice">
+                <h2>Fried Rice</h2>
+                <h3>₹800</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Pizza&price=700&image=photo/FastFood/pizza.webp">
+                <img src="photo/FastFood/pizza.webp" alt="Pizza">
+                <h2>Pizza</h2>
+                <h3>₹700</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <a href="order.html?item=Momos&price=500&image=photo/FastFood/momos.jpg">
+                <img src="photo/FastFood/momos.jpg" alt="Momos">
+                <h2>Momos</h2>
+                <h3>₹500</h3>
+                <button>Order</button>
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>

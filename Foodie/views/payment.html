@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .payment-form {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    .payment-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .payment-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    .payment-form input,
+    .payment-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .payment-form button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #pay-btn {
+      background-color: #007bff;
+      color: white;
+    }
+    #pay-btn:hover {
+      background-color: #0056b3;
+    }
+    #cod-btn {
+      background-color: green;
+      color: white;
+    }
+    #cod-btn:hover {
+      background-color: darkgreen;
+    }
+    .payment-method {
+      display: none;
+    }
+    .cod-message {
+      font-style: italic;
+      color: green;
+      margin-bottom: 10px;
+    }
+    a{
+      text-decoration: none;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="payment-form" action="/submit" method="POST">
+    <h2>Make a Payment</h2>
+
+    <label for="name">Full Name</label>
+    <input type="text" name="full_name" required />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" required />
+
+    <label for="method">Payment Method</label>
+    <select id="payment-method" name="payment_method" required>
+      <option value="">Select a method</option>
+      <option value="card">Credit/Debit Card</option>
+      <option value="upi">UPI</option>
+      <option value="netbanking">Net Banking</option>
+      <option value="cod">Cash on Delivery</option>
+    </select>
+
+    <!-- Card Section -->
+    <div id="card" class="payment-method">
+      <label>Card Number</label>
+      <input type="text" name="card_number" placeholder="1234 5678 9012 3456" />
+      <label>Expiry Date</label>
+      <input type="text" name="expiry_date" placeholder="MM/YY" />
+      <label>CVV</label>
+      <input type="text" name="cvv" placeholder="123" />
+    </div>
+
+    <!-- UPI Section -->
+    <div id="upi" class="payment-method">
+      <label>UPI ID</label>
+      <input type="text" name="upi_id" placeholder="yourname@upi" />
+    </div>
+
+    <!-- Net Banking Section -->
+    <div id="netbanking" class="payment-method">
+      <label>Select Bank</label>
+      <select name="bank">
+        <option value="">--Choose Bank--</option>
+        <option value="sbi">SBI</option>
+        <option value="hdfc">HDFC</option>
+        <option value="icici">ICICI</option>
+        <option value="axis">Axis Bank</option>
+      </select>
+    </div>
+
+    <!-- Cash on Delivery -->
+    <div id="cod" class="payment-method" name="cod">
+      <p class="cod-message">You will pay in cash upon delivery.</p>
+    </div>
+
+    <!-- Buttons -->
+    <button type="submit" id="pay-btn">Proceed to Pay</button>
+    <button type="submit" id="cod-btn" style="display: none;"><a href="order_placed.html">Confirm Order</a></button>
+  </form>
+
+  <script>
+    const methodSelect = document.getElementById('payment-method');
+    const methods = document.querySelectorAll('.payment-method');
+    const payBtn = document.getElementById('pay-btn');
+    const codBtn = document.getElementById('cod-btn');
+
+    methodSelect.addEventListener('change', function () {
+      // Hide all payment sections
+      methods.forEach(m => m.style.display = 'none');
+
+      const selected = this.value;
+
+      // Show the selected payment method section
+      if (selected) {
+        const selectedDiv = document.getElementById(selected);
+        if (selectedDiv) {
+          selectedDiv.style.display = 'block';
+        }
+      }
+
+      // Toggle buttons
+      if (selected === 'cod') {
+        payBtn.style.display = 'none';
+        codBtn.style.display = 'block';
+      } else {
+        payBtn.style.display = 'block';
+        codBtn.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
+

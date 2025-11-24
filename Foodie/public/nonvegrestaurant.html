@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurants</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .box {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      flex: 1 1 calc(25% - 1.5rem);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .box a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: block;
+    }
+
+    img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .box {
+        flex: 1 1 calc(33.33% - 1.5rem);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        flex: 1 1 calc(50% - 1.5rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .box {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Restaurants</h1>
+  <div class="container">
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/19.avif" alt="Neravi" />
+        <h3>Neravi</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/20.jpg" alt="Lotus Pavilion" />
+        <h3>Lotus Pavilion</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/21.jpg" alt="Empire" />
+        <h3>Empire</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/22.avif" alt="Spice Terrace" />
+        <h3>Spice Terrace</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/14.jpg" alt="Karavalli" />
+        <h3>Karavalli</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/15.jpg" alt="Shiro" />
+        <h3>Shiro</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/16.webp" alt="Gufha" />
+        <h3>Gufha</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/17.avif" alt="Ebony" />
+        <h3>Ebony</h3>
+      </a>
+    </div>
+    <div class="box">
+      <a href="nonveg.html">
+        <img src="photo/Resturant/18.jfif" alt="The Raj Pavilion" />
+        <h3>The Raj Pavilion</h3>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

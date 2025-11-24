@@ -1,0 +1,230 @@
+
+ <!-- thiss is new -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Foodie Non Veg</title>
+   <style>
+     * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
+ 
+     body {
+       font-family: Arial, sans-serif;
+       background-color: #f9f9f9;
+       padding: 20px;
+     }
+ 
+     .continer {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 1.5rem;
+       justify-content: center;
+       padding: 1rem;
+     }
+ 
+     .box {
+       background-color: #c9c3c3;
+       padding: 1.5rem;
+       border-radius: 8px;
+       text-align: center;
+       flex: 1 1 calc(25% - 1.5rem);
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       transition: transform 0.3s ease;
+     }
+ 
+     .box:hover {
+       transform: translateY(-5px);
+     }
+ 
+     .box a {
+       text-decoration: none;
+       color: inherit;
+       display: block;
+     }
+ 
+     .box img {
+       width: 100%;
+       height: 190px;
+       object-fit: cover;
+       border-radius: 10px;
+       margin-bottom: 10px;
+     }
+ 
+     .box h2 {
+       margin: 10px 0;
+       color: #333;
+     }
+ 
+     .box h3 {
+       color: #555;
+       margin: 5px 0;
+     }
+ 
+     .box button {
+       margin-top: 10px;
+       height: 35px;
+       width: 100px;
+       background-color: #4CAF50;
+       color: white;
+       font-size: 16px;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+     }
+ 
+     .box button:hover {
+       background-color: #2ecc71;
+       transform: translateY(-2px);
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 1024px) {
+       .box {
+         flex: 1 1 calc(33.33% - 1.5rem);
+       }
+     }
+ 
+     @media (max-width: 768px) {
+       .box {
+         flex: 1 1 calc(50% - 1.5rem);
+       }
+     }
+ 
+     @media (max-width: 480px) {
+       .box {
+         flex: 1 1 100%;
+       }
+     }
+   </style>
+ </head>
+ <body>
+   <div class="continer">
+     <!-- Chicken Burger -->
+     <div class="box">
+       <a href="order.html?item=Chicken Burger&price=550&image=photo/non%20veg/c%20burger.jpg">
+         <img src="photo/non veg/c burger.jpg" alt="Chicken Burger" />
+         <h2>Chicken Burger</h2>
+         <h3>₹550</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Hyderabad Biryani -->
+     <div class="box">
+       <a href="order.html?item=Hyderabad Biryani&price=1300&image=photo/non%20veg/hyd%20biry.webp">
+         <img src="photo/non veg/hyd biry.webp" alt="Hyderabad Biryani" />
+         <h2>Hyderabad Biryani</h2>
+         <h3>₹1300</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Chicken Kabab -->
+     <div class="box">
+       <a href="order.html?item=Chicken Kabab&price=900&image=photo/non%20veg/c%20kabab.jpg">
+         <img src="photo/non veg/c kabab.jpg" alt="Chicken Kabab" />
+         <h2>Chicken Kabab</h2>
+         <h3>₹900</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Chicken Khemma -->
+     <div class="box">
+       <a href="order.html?item=Chicken Khemma&price=800&image=photo/non%20veg/c%20khemma.jpg">
+         <img src="photo/non veg/c khemma.jpg" alt="Chicken Khemma" />
+         <h2>Chicken Khemma</h2>
+         <h3>₹800</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Chicken Curry -->
+     <div class="box">
+       <a href="order.html?item=Chicken Curry&price=1000&image=photo/non%20veg/chicken-curry.avif">
+         <img src="photo/non veg/chicken-curry.avif" alt="Chicken Curry" />
+         <h2>Chicken Curry</h2>
+         <h3>₹1000</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Chicken Soup -->
+     <div class="box">
+       <a href="order.html?item=Chicken Soup&price=800&image=photo/non%20veg/chiken%20soup.jpeg">
+         <img src="photo/non veg/chiken soup.jpeg" alt="Chicken Soup" />
+         <h2>Chicken Soup</h2>
+         <h3>₹800</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Dry Chicken -->
+     <div class="box">
+       <a href="order.html?item=Dry Chicken&price=1200&image=photo/non%20veg/dry%20chicken">
+         <img src="photo/non veg/dry chicken.jpg" alt="Dry Chicken" />
+         <h2>Dry Chicken</h2>
+         <h3>₹1200</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Fish Fry -->
+     <div class="box">
+       <a href="order.html?item=Fish Fry&price=1400&image=photo/non%20veg/fish%20fry.webp">
+         <img src="photo/non veg/fish fry.webp" alt="Fish Fry" />
+         <h2>Fish Fry</h2>
+         <h3>₹1400</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Goat Curry -->
+     <div class="box">
+       <a href="order.html?item=Goat Curry&price=1100&image=photo/non%20veg/goat%20curry.jpg">
+         <img src="photo/non veg/goat curry.jpg" alt="Goat Curry" />
+         <h2>Goat Curry</h2>
+         <h3>₹1100</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Mutton Biryani -->
+     <div class="box">
+       <a href="order.html?item=Mutton Biryani&price=1200&image=photo/non%20veg/mutton-biriyani.gif">
+         <img src="photo/non veg/mutton-biriyani.gif" alt="Mutton Biryani" />
+         <h2>Mutton Biryani</h2>
+         <h3>₹1200</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Popcorn Chicken -->
+     <div class="box">
+       <a href="order.html?item=Popcorn Chicken&price=1190&image=photo/non%20veg/popcon%20chicken">
+         <img src="photo/non veg/popcorn chicken.jpeg" alt="Popcorn Chicken" />
+         <h2>Popcorn Chicken</h2>
+         <h3>₹1190</h3>
+         <button>Order</button>
+       </a>
+     </div>
+ 
+     <!-- Schezwan Chicken -->
+     <div class="box">
+       <a href="order.html?item=Schezwan Chicken&price=1440&image=photo/non%20veg/sizwan%20chicken.jpg">
+         <img src="photo/non veg/sizwan chicken.jpg" alt="Schezwan Chicken" />
+         <h2>Schezwan Chicken</h2>
+         <h3>₹1440</h3>
+         <button>Order</button>
+       </a>
+     </div>
+   </div>
+ </body>
+ </html>
+ 

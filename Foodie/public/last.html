@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmed</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f0fff0, #d1f7d1);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .confirmation {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px 60px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      animation: popUp 0.7s ease;
+    }
+
+    .checkmark {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #28a745;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      animation: bounce 1s infinite alternate;
+      position: relative;
+    }
+
+    .checkmark::after {
+      content: '✔';
+      font-size: 50px;
+      color: white;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #28a745;
+      margin-bottom: 10px;
+      animation: fadeSlide 1s ease-out forwards;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.1em;
+      margin-top: 10px;
+      animation: fadeSlide 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeSlide {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Confetti Animation */
+    .confetti {
+      position: absolute;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background: #28a745;
+      animation: fall 3s linear infinite;
+      opacity: 0.8;
+    }
+
+    .confetti:nth-child(2n) { background: #ff4d4d; }
+    .confetti:nth-child(3n) { background: #ffc107; }
+    .confetti:nth-child(4n) { background: #17a2b8; }
+    .confetti:nth-child(5n) { background: #6f42c1; }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Random Confetti Pieces -->
+  <div class="confetti" style="left: 5%; animation-delay: 0s;"></div>
+  <div class="confetti" style="left: 15%; animation-delay: 0.5s;"></div>
+  <div class="confetti" style="left: 25%; animation-delay: 1s;"></div>
+  <div class="confetti" style="left: 35%; animation-delay: 1.5s;"></div>
+  <div class="confetti" style="left: 45%; animation-delay: 2s;"></div>
+  <div class="confetti" style="left: 55%; animation-delay: 2.5s;"></div>
+  <div class="confetti" style="left: 65%; animation-delay: 3s;"></div>
+  <div class="confetti" style="left: 75%; animation-delay: 1.2s;"></div>
+  <div class="confetti" style="left: 85%; animation-delay: 0.8s;"></div>
+  <div class="confetti" style="left: 95%; animation-delay: 1.8s;"></div>
+
+  <div class="confirmation">
+    <div class="checkmark"></div>
+    <h2>Order Confirmed!</h2>
+    <p>Thanks for ordering with Foodie. Your delicious food is on its way! 🚴‍♂️🍔🍕</p>
+  </div>
+
+</body>
+</html>

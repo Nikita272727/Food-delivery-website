@@ -1,0 +1,40 @@
+{
+  "author": "synvox",
+  "description": "",
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": "./dist/sql2.js"
+  },
+  "keywords": [
+    "builder",
+    "database",
+    "javascript",
+    "mariadb",
+    "microsoft sql server",
+    "mysql",
+    "nodejs",
+    "oracle",
+    "postgresql",
+    "query",
+    "sql",
+    "sqlite",
+    "template-strings",
+    "typescript"
+  ],
+  "license": "CC0-1.0",
+  "name": "sql2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synvox/sql2.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test './src/**/*.test.ts'",
+    "typecheck": "tsc -p tsconfig.lib.json --noEmit"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}

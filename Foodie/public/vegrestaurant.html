@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .box {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1 1 calc(25% - 1.5rem); /* 4 items per row on large screens */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .box {
+                flex: 1 1 calc(33.33% - 1.5rem); /* 3 items per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 1.5rem); /* 2 items per row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                flex: 1 1 100%; /* 1 item per row */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurants</h1>
+    <div class="container">
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/10.jpg" alt="Spice Terrace">
+                <h3>Spice Terrace</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/11.webp" alt="Street Stroyss">
+                <h3>Street Stroyss</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/12.jpg" alt="Green Theory">
+                <h3>Green Theory</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/13.jpg" alt="Gramin">
+                <h3>Gramin</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/14.jpg" alt="Kailash Parbat">
+                <h3>Kailash Parbat</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/15.jpg" alt="Sattvam">
+                <h3>Sattvam</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/16.webp" alt="Time Traveller">
+                <h3>Time Traveller</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/17.avif" alt="Element3">
+                <h3>Element3</h3>
+            </a>
+        </div>
+        <div class="box">
+            <a href="vegfood.html">
+                <img src="photo/Resturant/18.jfif" alt="Vegan Vogue">
+                <h3>Vegan Vogue</h3>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
